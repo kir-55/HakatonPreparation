@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Amulet" load_steps=3 format=3 uid="uid://bknu8wng2l2lf"]
+
+[ext_resource type="Script" path="res://amulet.gd" id="1_k4qfb"]
+[ext_resource type="Texture2D" uid="uid://ig0qfgwh2sys" path="res://Amulets/Снимок экрана 2022-02-10 090217.jpg" id="2_2xqkt"]
+
+[resource]
+script = ExtResource("1_k4qfb")
+id = 0
+amulet_name = "Amulet1"
+description = "bla bla bla"
+texture = ExtResource("2_2xqkt")

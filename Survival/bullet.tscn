@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://10rcpck3c8en"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_i34wl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbt4j"]
+radius = 24.0
+
+[sub_resource type="Gradient" id="Gradient_jrbpf"]
+interpolation_mode = 1
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xpuik"]
+gradient = SubResource("Gradient_jrbpf")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.91453, 0.777778)
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_i34wl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wbt4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.75, 0.75)
+texture = SubResource("GradientTexture2D_xpuik")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

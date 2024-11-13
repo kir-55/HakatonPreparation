@@ -1,0 +1,560 @@
+[gd_scene load_steps=12 format=3 uid="uid://is7lxw1tr5pi"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_biaxc"]
+[ext_resource type="Script" path="res://gun.gd" id="2_8vjpf"]
+[ext_resource type="PackedScene" uid="uid://10rcpck3c8en" path="res://bullet.tscn" id="3_0g8kp"]
+
+[sub_resource type="Curve" id="Curve_dpj6o"]
+max_value = 5.0
+_data = [Vector2(0.0133333, 0), 0.0, 0.0, 0, 0, Vector2(1, 5), 11.2875, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_isgq1"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ebq8"]
+radius = 29.2746
+
+[sub_resource type="Gradient" id="Gradient_1a4ib"]
+interpolation_mode = 1
+colors = PackedColorArray(1, 0.729412, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yw776"]
+gradient = SubResource("Gradient_1a4ib")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.854701, 0.153846)
+
+[sub_resource type="Gradient" id="Gradient_4nb66"]
+interpolation_mode = 1
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ccd8j"]
+gradient = SubResource("Gradient_4nb66")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.495726, 0.495726)
+fill_to = Vector2(0.854701, 0.837607)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_urs00"]
+radius = 62.0504
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 20.0
+width_curve = SubResource("Curve_dpj6o")
+default_color = Color(1, 1, 1, 0.282353)
+gradient = SubResource("Gradient_isgq1")
+
+[node name="Enemy" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(197, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy2" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(579, 122)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy2"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy3" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(359, 140)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy3"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy4" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(444, 153)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy4" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy4"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy5" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(619, 247)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy5" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy5"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy6" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(206, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy6" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy6"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy7" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(588, 522)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy7" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy7"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy8" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(368, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy8" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy8"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy9" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(453, 553)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy9" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy9"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy10" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(628, 647)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy10" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy10"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy11" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(242, 33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy11" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy11"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy12" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(624, 55)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy12" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy12"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy13" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(404, 73)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy13" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy13"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy14" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(489, 86)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy14" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy14"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy15" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(664, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy15" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy15"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy16" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(-144, 163)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy16" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy16"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy17" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(238, 185)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy17" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy17"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy18" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(18, 203)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy18" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy18"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy19" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(103, 216)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy19" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy19"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy20" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(278, 310)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy20" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy20"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy21" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(-229, 257)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy21" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy21"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy22" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(153, 279)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy22" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy22"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy23" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(-67, 297)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy23" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy23"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy24" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(18, 310)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy24" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy24"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy25" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(193, 404)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy25" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy25"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy26" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(-305, 365)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy26" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy26"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy27" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(77, 387)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy27" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy27"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy28" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(-143, 405)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy28" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy28"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy29" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(-58, 418)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy29" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy29"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy30" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(117, 512)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy30" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy30"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy31" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(104, 576)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy31" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy31"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy32" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(486, 598)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy32" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy32"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy33" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(266, 616)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy33" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy33"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy34" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(351, 629)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy34" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy34"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy35" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(526, 723)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy35" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy35"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy36" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(638, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy36" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy36"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy37" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(1020, 351)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy37" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy37"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy38" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(800, 369)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy38" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy38"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy39" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(885, 382)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy39" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy39"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy40" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(1060, 476)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy40" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy40"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy41" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(602, 419)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy41" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy41"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy42" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(984, 441)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy42" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy42"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy43" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(764, 459)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy43" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy43"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy44" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(849, 472)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy44" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy44"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy45" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(1024, 566)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy45" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy45"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy46" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(737, 195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy46" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy46"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy47" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(1119, 217)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy47" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy47"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy48" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(899, 235)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy48" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy48"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy49" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(984, 248)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy49" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy49"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy50" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(1159, 342)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy50" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy50"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy51" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(557, 563)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy51" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy51"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy52" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(939, 585)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy52" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy52"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy53" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(719, 603)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy53" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy53"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy54" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(804, 616)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy54" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy54"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Enemy55" type="CharacterBody2D" parent="." groups=["destroyable_object"]]
+position = Vector2(979, 710)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy55" groups=["destroyable_object"]]
+shape = SubResource("CircleShape2D_1ebq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy55"]
+texture = SubResource("GradientTexture2D_yw776")
+
+[node name="Player" type="CharacterBody2D" parent="." node_paths=PackedStringArray("trail")]
+position = Vector2(478, 374)
+script = ExtResource("1_biaxc")
+trail = NodePath("../Line2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = SubResource("GradientTexture2D_ccd8j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, -0.5)
+shape = SubResource("CircleShape2D_urs00")
+
+[node name="Gun" type="Node2D" parent="Player"]
+script = ExtResource("2_8vjpf")
+bullet_prefab = ExtResource("3_0g8kp")

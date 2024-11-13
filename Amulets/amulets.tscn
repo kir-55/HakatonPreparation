@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://d25jy668rdow1"]
+
+[ext_resource type="Script" path="res://amulet_system.gd" id="2_e4tg3"]
+[ext_resource type="PackedScene" uid="uid://b4gt65xd5xb3n" path="res://amulet_icon_template.tscn" id="2_jh75f"]
+[ext_resource type="Resource" uid="uid://bknu8wng2l2lf" path="res://Amulets/amulet1.tres" id="3_d0n54"]
+[ext_resource type="Resource" uid="uid://dtx2v8mtipfxj" path="res://Amulets/amulet2.tres" id="4_1knhk"]
+[ext_resource type="Resource" uid="uid://d0xmgufk18lgn" path="res://Amulets/amulet3.tres" id="5_haqkh"]
+[ext_resource type="Resource" uid="uid://ctvds4nwydvud" path="res://Amulets/amulet4.tres" id="6_kna0w"]
+
+[node name="Amulets" type="Node2D"]
+position = Vector2(3, 4)
+
+[node name="Player" type="Node" parent="."]
+
+[node name="Amulets" type="Node" parent="Player" node_paths=PackedStringArray("amulets_panel")]
+script = ExtResource("2_e4tg3")
+amulet_icon_template = ExtResource("2_jh75f")
+amulets_panel = NodePath("../Camera2D/Control/VBoxContainer")
+amulets_list = Array[Resource("res://amulet.gd")]([ExtResource("3_d0n54"), ExtResource("4_1knhk"), ExtResource("5_haqkh"), ExtResource("6_kna0w")])
+amulets_avaliable = Array[int]([0, 0, 1])
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(3, 4)
+
+[node name="Control" type="Control" parent="Player/Camera2D"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 3
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -575.0
+offset_top = -324.0
+offset_right = 575.0
+offset_bottom = 324.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Player/Camera2D/Control"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+grow_horizontal = 0
+grow_vertical = 2

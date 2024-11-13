@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Amulet" load_steps=2 format=3 uid="uid://ctvds4nwydvud"]
+
+[ext_resource type="Script" path="res://amulet.gd" id="1_chmvy"]
+
+[resource]
+script = ExtResource("1_chmvy")
+id = 0
+amulet_name = "Amulet"
+description = ""
