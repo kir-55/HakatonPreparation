@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://e08epeywtkdq"]
+
+[ext_resource type="Texture2D" uid="uid://dawveh0coii3k" path="res://360_F_704088395_zgUgMxB5HxWFkWotVTnapLPYD5YdI0gW.jpg" id="1_ouhos"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3kh7"]
+font_size = 20
+shadow_size = 4
+
+[node name="Card" type="Button"]
+custom_minimum_size = Vector2(287, 444)
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -4.0
+offset_right = 251.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+
+[node name="Image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 313.53
+grow_horizontal = 2
+pivot_offset = Vector2(99, -1)
+texture = ExtResource("1_ouhos")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -130.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Speed of cheetah"
+label_settings = SubResource("LabelSettings_i3kh7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.782
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.208038
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+bbcode_enabled = true
+text = "[center][font_size=\"10px\"] 20% buff to your movement speed [/font_size][/center]"

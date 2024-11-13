@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://813whclaovqb"]
+
+[ext_resource type="Script" path="res://card.gd" id="1_2sjdl"]
+[ext_resource type="Texture2D" uid="uid://dawveh0coii3k" path="res://360_F_704088395_zgUgMxB5HxWFkWotVTnapLPYD5YdI0gW.jpg" id="2_6uxj4"]
+
+[resource]
+script = ExtResource("1_2sjdl")
+id = 0
+name = "Speed of cheetah"
+description = "20% buff to your movement speed"
+texture = ExtResource("2_6uxj4")
+rarity = 100

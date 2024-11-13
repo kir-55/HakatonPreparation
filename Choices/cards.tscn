@@ -1,0 +1,25 @@
+[gd_scene load_steps=8 format=3 uid="uid://eh60bym0gfh"]
+
+[ext_resource type="Script" path="res://cards_system.gd" id="1_w0oiv"]
+[ext_resource type="PackedScene" uid="uid://e08epeywtkdq" path="res://card_template.tscn" id="2_0a3qe"]
+[ext_resource type="Resource" uid="uid://813whclaovqb" path="res://Cards/card_common.tres" id="2_oypdm"]
+[ext_resource type="Resource" uid="uid://bum5vuunx08of" path="res://Cards/card_rare.tres" id="3_jtx7m"]
+[ext_resource type="Resource" uid="uid://cpskf4pxs4pio" path="res://Cards/card_common2.tres" id="3_qqn8v"]
+[ext_resource type="Resource" uid="uid://qqw3x7ml108i" path="res://Cards/card_epic.tres" id="4_nb3lh"]
+[ext_resource type="Resource" uid="uid://e2j4k0ro53ly" path="res://Cards/card_legendary.tres" id="5_gy63g"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("panel")]
+script = ExtResource("1_w0oiv")
+cards = Array[Resource("res://card.gd")]([ExtResource("2_oypdm"), ExtResource("3_qqn8v"), ExtResource("3_jtx7m"), ExtResource("4_nb3lh"), ExtResource("5_gy63g")])
+panel = NodePath("Camera2D/VFlowContainer")
+card_template = ExtResource("2_0a3qe")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="VFlowContainer" type="VFlowContainer" parent="Camera2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1

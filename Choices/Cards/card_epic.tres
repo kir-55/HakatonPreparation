@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://qqw3x7ml108i"]
+
+[ext_resource type="Script" path="res://card.gd" id="1_8rrd1"]
+[ext_resource type="Texture2D" uid="uid://djhor15b4e8i2" path="res://Bald-eagle.webp" id="2_81qii"]
+
+[resource]
+script = ExtResource("1_8rrd1")
+id = 2
+name = "Vision of eagel"
+description = "You see where the enemies are hiding"
+texture = ExtResource("2_81qii")
+rarity = 20
